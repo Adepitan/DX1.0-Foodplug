@@ -34,3 +34,42 @@
     align-items: center;
 }
 /* food choice section ends here */
+
+
+
+
+
+
+
+/* faq section starts here */
+.faq-item{
+    min-width: 100%;
+    padding: 0 10px;
+}
+/* faq section ends here  */
+
+/* parallax section start here */
+.parallax{
+    flex-direction: column;
+    padding: 0 25px;
+    text-align: center ;
+}
+}
+/* parallax section ends here */
+
+.cta-section{
+    padding:0 10px
+}
+
+
+/* footer starts here */
+footer{
+    flex-direction: column;
+
+}
+.footer-icon-container{
+    margin: 20px 0;
+}
+footer p{
+    text-align: center;
+}
