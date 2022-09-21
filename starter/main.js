@@ -9,8 +9,9 @@ var ourbody = document.querySelector(".ourpagebody")
 
 var harmburger =document.querySelector(".harmburger-container")
 console.log(harmburger)
-
+var mobilelinkscontainer = document.querySelector(".mobile-links-container")
 
 function addandremove(){
     harmburger.classList.toggle("showburgar")
+    mobilelinkscontainer.classList.toggle("showmobilelinks")
 }

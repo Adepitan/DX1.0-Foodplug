@@ -47,13 +47,20 @@ list-style: none;
 display: flex;
 }
 .desktoplink-contain ul li{
-    padding: 15px 20px;
     border:2px solid transparent;
     color: var(--main-color);
+}
+.desktoplink-contain ul a{
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
 }
 body{
     height: 1500px;
     /* font-family: ; */
+}
+html{
+    scroll-behavior: smooth;
 }
 .btn{
     padding: 16px 20px;
@@ -70,12 +77,12 @@ body{
 .btn-light{
     border: 2px solid var(--main-color);
 
-    background: var(--white-color);
+    background: transparent;
 }
 .btn-light:hover{
     color: var(--main-color);
 }
-li:hover{
+.desktoplink-contain li:hover{
     border: 2px solid var(--main-color);
 }
 .nav-mobile{
@@ -111,6 +118,7 @@ li:hover{
     width: 30px;
     display: flex;
     align-items: center;
+    z-index: 100;
 }
 .menu{
     width: 100%;
@@ -120,7 +128,7 @@ li:hover{
 }
 .menu::before{
 content: "";
-background: tomato;
+background: var(--white-color);
 width: 100%;
 height: 3px;
 position: absolute;
@@ -129,7 +137,7 @@ transform: translateY(-10px);
 }
 .menu::after{
     content: '';
-    background: black;
+    background: var(--white-color);
     width: 100%;
     height: 3px;
     position: absolute;
@@ -141,9 +149,11 @@ transform: translateY(-10px);
 }
 .showburgar .menu::before{
     transform: rotate(45deg);
+    background: var(--main-color);
 }
 .showburgar .menu::after{
     transform: rotate(-45deg);
+    background-color: var(--main-color);
 }
 /* the header banner starts here */
 .header-banner-section{
@@ -180,8 +190,45 @@ background-size: cover;
 .banner-icons{
     margin: 0 0 0 10px;
 }
-
-
+.mobile-links-container{
+    display: none;
+    width: 50%;
+    background: var(--main-color);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+.showmobilelinks {
+    display: block;
+}
+.mobile-links-container ul {
+list-style: none;
+}
+.mobile-links-container a {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 22px 20px;
+}
+.mobile-links-container a:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+.mobile-links-container button{
+    margin: 0 0 0 20px;
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    color: white;
+}
+.mobile-links-container .active {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+.showmobilelinks{
+    display: block;
+}
 /* the header banner starts here */
 
 /* header-countersection start here */
@@ -483,4 +530,7 @@ footer button:hover {
     align-items: center;
     border-radius: 50%;
     font-size: 18px;
+}
+.footer-icons:hover{
+    background: var(--main-color-dark);
 }
